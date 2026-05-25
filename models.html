@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ brand|capitalize }} Phones</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="models-page">
+
+<div class="models-wrapper">
+
+  <!-- Title -->
+  <h2 class="page-title">{{ brand|capitalize }} Phones</h2>
+
+  <!-- Grid for phone cards -->
+  <div class="models-grid">
+    {% for p in phones %}
+      <div class="model-card">
+        <img src="{{ p[3] }}" class="phone-img">
+        <h3>{{ p[0] }}</h3>
+        <p>{{ p[2] }}</p>
+        <p style="font-weight:bold;">$ {{ p[1] }}</p>
+        <form class="model-button" method="post" action="/summary">
+    <input type="hidden" name="phone" value="{{ p[0] }}">
+    <input type="hidden" name="price" value="{{ p[1] }}">
+    <input type="number" name="qty" min="1" value="1">
+    <button type="submit">Add to Cart</button>
+</form>
+
+      </div>
+    {% endfor %}
+  </div>
+
+</div>
+
+</body>
+</html>

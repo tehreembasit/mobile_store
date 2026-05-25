@@ -1,0 +1,241 @@
+*{
+box-sizing:border-box;
+font-family: "Segoe UI", sans-serif;
+}
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background: url("https://img.pikbest.com/background/20220119/mobile-phone-technology-business-blue-creative-background_6218554.jpg!w700wp") center/cover no-repeat;
+
+}
+
+.auth-container{
+background:white;
+width:380px;
+padding:30px;
+border-radius:14px;
+box-shadow:0 15px 35px rgba(0,0,0,0.35);
+}
+
+.auth-container h2{
+margin-bottom:5px;
+color:#333;
+}
+
+.subtitle{
+color:#777;
+font-size:14px;
+margin-bottom:25px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:15px;
+}
+
+input:focus{
+outline:none;
+border-color:#667eea;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#667eea;
+border:none;
+color:white;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#5a67d8;
+}
+
+.row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:15px;
+}
+
+.forgot{
+font-size:13px;
+text-decoration:none;
+color:#667eea;
+}
+
+.switch{
+text-align:center;
+margin-top:15px;
+font-size:14px;
+}
+
+.switch a{
+color:#667eea;
+text-decoration:none;
+font-weight:600;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+padding:40px;
+}
+
+.grid img{
+width:120px;
+background:white;
+padding:10px;
+border-radius:12px;
+box-shadow:0 8px 15px rgba(0,0,0,0.4);
+}
+/* ---------- COMPANIES PAGE LAYOUT FIX ---------- */
+
+body.companies-page {
+  display: block;       /* cancel the flex from global body */
+  height: auto;
+}
+
+.companies-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 30px;    /* makes title appear at top */
+}
+
+.page-title {
+  margin: 0 0 30px 0;
+  font-size: 32px;
+  color: white;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+/* grid remains same */
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.company-card {
+  height: 300px;
+  width: 300px;
+  background: white;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+  transition: 0.3s;
+}
+
+.company-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 30px rgba(0,0,0,0.45);
+}
+
+.company-card img {
+  max-width: 75%;
+  max-height: 75%;
+  object-fit: contain;
+}
+/* ---------- MODELS PAGE ---------- */
+body.models-page {
+  display: block;           /* cancel global flex */
+  height: auto;
+ background: url("https://img.pikbest.com/background/20220119/mobile-phone-technology-business-blue-creative-background_6218554.jpg!w700wp") center/cover no-repeat;
+
+}
+
+.models-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 30px;       /* title at top */
+}
+
+.page-title {
+  margin: 0 0 30px 0;
+  font-size: 32px;
+  color: white;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+/* Grid for models */
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Card for each phone */
+.model-card {
+  height: 600px;                  /* taller than companies card */
+  width: 300px;
+  background: white;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+  transition: 0.3s;
+}
+
+.model-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 30px rgba(0,0,0,0.45);
+}
+
+.model-card h3 {
+  margin: 10px 0 5px 0;
+}
+
+.model-card p {
+  margin: 5px 0;
+}
+
+.model-button button {
+  width: 80%;
+  padding: 10px;
+  background: #667eea;
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.model-button button:hover {
+  background: #5a67d8;
+}
+
+/* Image fix */
+.phone-img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 5px;
+}
